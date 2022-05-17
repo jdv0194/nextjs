@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import styles from "./MyIsacaMain.module.css";
 import Image from "next/image";
@@ -32,6 +32,7 @@ const MyIsacaUser = (props) => {
               <div className={styles["certifications-container"]}>
                 <div className={styles["cert-img-container"]}>
                   <Image
+                    alt="alt"
                     width={40}
                     height={40}
                     src={`https://sf-sit.isaca.org${el.LogoImage}`}
@@ -41,9 +42,9 @@ const MyIsacaUser = (props) => {
                     <p className={styles["cert-subtitle"]}>{el.Through}</p>
                   </div>
                 </div>
-                {el.Balances.map((balance) => {
+                {el.Balances.map((balance, idx) => {
                   return (
-                    <div className={styles["cert-balance-container"]}>
+                    <div key={idx} className={styles["cert-balance-container"]}>
                       <p className={styles["cert-key"]}>{balance.Key}:</p>
                       <span className={styles["cert-value"]}>
                         {balance.Value}

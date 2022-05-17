@@ -1,6 +1,4 @@
 import { useEffect, useState } from "react";
-import Link from "next/link";
-
 import MyIsacaUser from "./MyIsacaUser";
 
 const IsacaHeader = ({ id, user, userSummary, setHeader }) => {
@@ -8,7 +6,7 @@ const IsacaHeader = ({ id, user, userSummary, setHeader }) => {
 
   useEffect(() => {
     setHeader(activeLink);
-  }, [activeLink]);
+  }, [activeLink, setHeader]);
 
   return (
     <>
