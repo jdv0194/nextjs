@@ -71,31 +71,6 @@ export const getStaticPaths = async (context) => {
           id: "header",
         },
       },
-      {
-        params: {
-          id: "certifications",
-        },
-      },
-      {
-        params: {
-          id: "learnings",
-        },
-      },
-      {
-        params: {
-          id: "cpecertificates",
-        },
-      },
-      {
-        params: {
-          id: "downloads",
-        },
-      },
-      {
-        params: {
-          id: "certificates",
-        },
-      },
     ],
     fallback: false,
   };
